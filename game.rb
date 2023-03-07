@@ -9,7 +9,7 @@ class Game
 
   def question(player)
     @numbers = [rand(1..10), rand(1..10)]
-    puts "#{player}: What does #{@numbers[0]} plus #{@numbers[1]} equal?"
+    puts "Player#{player.id}: What does #{@numbers[0]} plus #{@numbers[1]} equal?"
   end
 
   def sum
@@ -17,15 +17,15 @@ class Game
   end
 
   def correct(player)
-    puts "#{player}: YES! You are correct."
+    puts "Player#{player.id}: YES! You are correct."
   end
 
   def wrong(player)
-    puts "#{player}: Seriously? No!"
+    puts "Player#{player.id}: Seriously? No!"
   end
 
   def score(player1, player2)
-    puts "#{player1} vs #{player2}"
+    puts "P#{player1.id}: #{player1.lives}/3 vs P#{player2.id}: #{player2.lives}/3"
   end
 
   def new_turn

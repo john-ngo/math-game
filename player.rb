@@ -1,5 +1,5 @@
 class Player
-  attr_reader :lives
+  attr_reader :lives, :id
 
   def initialize id
     @id = id
@@ -8,14 +8,6 @@ class Player
 
   def lost_live
     @lives -= 1
-  end
-
-  def print_player
-    "Player #{@id}"
-  end
-
-  def score
-    "P#{@id}: #{@lives}/3"
   end
 
   def win
